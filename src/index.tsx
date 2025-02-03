@@ -112,9 +112,7 @@ const printTcp = async (
     printerDpi,
     printerWidthMM,
     printerNbrCharactersPerLine,
-    timeout,
-    encoding,
-    charsetId,
+    timeout
   );
 };
 
@@ -129,9 +127,7 @@ const printBluetooth = (
     mmFeedPaper,
     printerDpi,
     printerWidthMM,
-    printerNbrCharactersPerLine,
-    encoding,
-    charsetId,
+    printerNbrCharactersPerLine
   } = getConfig(args);
 
   return ThermalPrinterModule.printBluetooth(
