@@ -142,7 +142,9 @@ const printBluetooth = (
     mmFeedPaper,
     printerDpi,
     printerWidthMM,
-    printerNbrCharactersPerLine
+    printerNbrCharactersPerLine,
+    encoding,
+    charsetId,
   );
 };
 
