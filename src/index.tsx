@@ -97,9 +97,7 @@ const printTcp = async (
     printerDpi,
     printerWidthMM,
     printerNbrCharactersPerLine,
-    timeout,
-    encoding,
-    charsetId,
+    timeout
   } = getConfig(args);
 
   await ThermalPrinterModule.printTcp(
@@ -127,7 +125,9 @@ const printBluetooth = (
     mmFeedPaper,
     printerDpi,
     printerWidthMM,
-    printerNbrCharactersPerLine
+    printerNbrCharactersPerLine,
+    encoding,
+    charsetId,
   } = getConfig(args);
 
   return ThermalPrinterModule.printBluetooth(
