@@ -130,6 +130,8 @@ const printBluetooth = (
     printerDpi,
     printerWidthMM,
     printerNbrCharactersPerLine,
+    encoding,
+    charsetId,
   } = getConfig(args);
 
   return ThermalPrinterModule.printBluetooth(
