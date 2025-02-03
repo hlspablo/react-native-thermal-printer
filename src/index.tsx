@@ -64,7 +64,7 @@ interface PrintBluetoothInterface extends PrinterInterface {
 
 let defaultConfig: PrintTcpInterface & PrintBluetoothInterface = {
   macAddress: '',
-  ip: '192.168.192.168',
+  ip: '192.168.1.125',
   port: 9100,
   payload: '',
   autoCut: true,
@@ -97,7 +97,9 @@ const printTcp = async (
     printerDpi,
     printerWidthMM,
     printerNbrCharactersPerLine,
-    timeout
+    timeout,
+    encoding,
+    charsetId
   } = getConfig(args);
 
   await ThermalPrinterModule.printTcp(
@@ -110,7 +112,9 @@ const printTcp = async (
     printerDpi,
     printerWidthMM,
     printerNbrCharactersPerLine,
-    timeout
+    timeout,
+    encoding,
+    charsetId
   );
 };
 
