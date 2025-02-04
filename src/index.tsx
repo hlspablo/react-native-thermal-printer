@@ -17,7 +17,9 @@ type NativeModuleType = typeof NativeModules & {
       printerDpi: number,
       printerWidthMM: number,
       printerNbrCharactersPerLine: number,
-      timeout: number
+      timeout: number,
+      encoding: string,
+      charsetId: number
     ): Promise<void>;
     printBluetooth(
       macAddress: string,
@@ -27,7 +29,9 @@ type NativeModuleType = typeof NativeModules & {
       mmFeedPaper: number,
       printerDpi: number,
       printerWidthMM: number,
-      printerNbrCharactersPerLine: number
+      printerNbrCharactersPerLine: number,
+      encoding: string,
+      charsetId: number
     ): Promise<void>;
     getBluetoothDeviceList(): Promise<BluetoothPrinter[]>;
   };
@@ -57,21 +61,11 @@ interface PrintTcpInterface extends PrinterInterface {
 
 interface PrintBluetoothInterface extends PrinterInterface {
   macAddress: string;
+  encoding: string;
+  charsetId: number;
 }
 
-let defaultConfig: {
-  macAddress: string;
-  ip: string;
-  port: number;
-  payload: string;
-  autoCut: boolean;
-  openCashbox: boolean;
-  mmFeedPaper: number;
-  printerDpi: number;
-  printerWidthMM: number;
-  printerNbrCharactersPerLine: number;
-  timeout: number;
-} = {
+let defaultConfig: PrintTcpInterface & PrintBluetoothInterface = {
   macAddress: '',
   ip: '192.168.192.168',
   port: 9100,
@@ -83,6 +77,8 @@ let defaultConfig: {
   printerWidthMM: 80,
   printerNbrCharactersPerLine: 42,
   timeout: 30000,
+  encoding: 'UTF-8',
+  charsetId: 0,
 };
 
 const getConfig = (
@@ -105,6 +101,8 @@ const printTcp = async (
     printerWidthMM,
     printerNbrCharactersPerLine,
     timeout,
+    encoding,
+    charsetId,
   } = getConfig(args);
 
   await ThermalPrinterModule.printTcp(
@@ -117,7 +115,9 @@ const printTcp = async (
     printerDpi,
     printerWidthMM,
     printerNbrCharactersPerLine,
-    timeout
+    timeout,
+    encoding,
+    charsetId
   );
 };
 
@@ -133,6 +133,8 @@ const printBluetooth = (
     printerDpi,
     printerWidthMM,
     printerNbrCharactersPerLine,
+    encoding,
+    charsetId,
   } = getConfig(args);
 
   return ThermalPrinterModule.printBluetooth(
@@ -143,7 +145,9 @@ const printBluetooth = (
     mmFeedPaper,
     printerDpi,
     printerWidthMM,
-    printerNbrCharactersPerLine
+    printerNbrCharactersPerLine,
+    encoding,
+    charsetId
   );
 };
 
