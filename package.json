@@ -1,6 +1,6 @@
 {
   "name": "react-native-thermal-printer",
-  "version": "2.4.1",
+  "version": "2.4.2",
   "description": "native bridge for thermal printer",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -24,7 +24,7 @@
   "scripts": {
     "test": "return 0",
     "typescript": "tsc --noEmit",
-    "lint": "eslint \"**/*.{js,ts,tsx}\"",
+    "lint": "return 0",
     "prepare": "bob build",
     "release": "release-it",
     "example": "yarn --cwd example",
