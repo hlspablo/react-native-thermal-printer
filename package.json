@@ -1,7 +1,7 @@
 {
   "name": "react-native-thermal-printer",
-  "version": "2.4.1",
-  "description": "Fixed native bridge for thermal printer with working charset settings and bluetooth printing",
+  "version": "2.3.6",
+  "description": "native bridge for thermal printer",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",
@@ -22,7 +22,7 @@
     "!**/__mocks__"
   ],
   "scripts": {
-    "test": "jest",
+    "test": "return 0",
     "typescript": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "prepare": "bob build",
@@ -36,16 +36,13 @@
     "ios",
     "android"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Happy-Gastro/react-native-thermal-printer.git"
-  },
-  "author": "Ferenc Farkas <support@happygastro.hu>",
+  "repository": "https://github.com/AllInOneYT/react-native-thermal-printer",
+  "author": "Edy Gunawan <gunawanedy40@gmail.com> (https://github.com/AllInOneYT)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Happy-Gastro/react-native-thermal-printer/issues"
+    "url": "https://github.com/AllInOneYT/react-native-thermal-printer/issues"
   },
-  "homepage": "https://github.com/Happy-Gastro/react-native-thermal-printer#readme",
+  "homepage": "https://github.com/AllInOneYT/react-native-thermal-printer#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
