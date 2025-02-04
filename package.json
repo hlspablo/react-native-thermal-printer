@@ -1,7 +1,7 @@
 {
   "name": "react-native-thermal-printer",
-  "version": "2.4.6",
-  "description": "native bridge for thermal printer",
+  "version": "2.4.0",
+  "description": "Native bridge for thermal printer from Happy Solutions",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",
@@ -22,7 +22,7 @@
     "!**/__mocks__"
   ],
   "scripts": {
-    "test": "return 0",
+    "test": "jest",
     "typescript": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "prepare": "bob build",
