@@ -17,9 +17,7 @@ type NativeModuleType = typeof NativeModules & {
       printerDpi: number,
       printerWidthMM: number,
       printerNbrCharactersPerLine: number,
-      timeout: number,
-      encoding: string,
-      charsetId: number
+      timeout: number
     ): Promise<void>;
     printBluetooth(
       macAddress: string,
@@ -99,8 +97,6 @@ const printTcp = async (
     printerWidthMM,
     printerNbrCharactersPerLine,
     timeout,
-    encoding,
-    charsetId,
   } = getConfig(args);
 
   await ThermalPrinterModule.printTcp(
@@ -113,9 +109,7 @@ const printTcp = async (
     printerDpi,
     printerWidthMM,
     printerNbrCharactersPerLine,
-    timeout,
-    encoding,
-    charsetId
+    timeout
   );
 };
 
