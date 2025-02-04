@@ -61,8 +61,7 @@ interface PrintBluetoothInterface extends PrinterInterface {
   macAddress: string;
 }
 
-let defaultConfig: PrintTcpInterface & PrintBluetoothInterface = {
-  macAddress: '',
+let defaultConfig = {
   ip: '192.168.1.125',
   port: 9100,
   payload: '',
