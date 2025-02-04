@@ -1,6 +1,6 @@
 {
   "name": "react-native-thermal-printer",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "description": "Fixed native bridge for thermal printer with working charset settings and bluetooth printing",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -152,8 +152,5 @@
         }
       ]
     ]
-  },
-  "directories": {
-    "example": "example"
   }
 }
