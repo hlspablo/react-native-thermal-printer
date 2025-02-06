@@ -81,7 +81,7 @@ let defaultConfig: PrintTcpInterface & PrintBluetoothInterface = {
   printerNbrCharactersPerLine: 42,
   timeout: 30000,
   charset: 'CP437',
-  encodingId: 0
+  encodingId: 0,
 };
 
 const getConfig = (
@@ -105,7 +105,7 @@ const printTcp = async (
     printerNbrCharactersPerLine,
     timeout,
     charset,
-    encodingId
+    encodingId,
   } = getConfig(args);
 
   await ThermalPrinterModule.printTcp(
@@ -137,7 +137,7 @@ const printBluetooth = (
     printerWidthMM,
     printerNbrCharactersPerLine,
     charset,
-    encodingId
+    encodingId,
   } = getConfig(args);
 
   return ThermalPrinterModule.printBluetooth(
