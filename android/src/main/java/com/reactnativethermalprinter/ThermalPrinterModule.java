@@ -78,7 +78,7 @@ public class ThermalPrinterModule extends ReactContextBaseJavaModule {
     this.jsPromise = promise;
     try {
       TcpConnection connection = new TcpConnection(ipAddress, (int) port, (int) timeout);
-      this.printIt(connection, payload, autoCut, openCashbox, mmFeedPaper, printerDpi, printerWidthMM, printerNbrCharactersPerLine, String charset, double encodingId);
+      this.printIt(connection, payload, autoCut, openCashbox, mmFeedPaper, printerDpi, printerWidthMM, printerNbrCharactersPerLine, charset, encodingId);
     } catch (Exception e) {
       this.jsPromise.reject("Connection Error", e.getMessage());
     }
