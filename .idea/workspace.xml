@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="66aaaada-c995-4b29-9d1b-f993fa9d1cc9" name="Changes" comment="Fix passing charset and encodingId to native through bridge (for TCP and Bluetooth too), default is Cp437 - OEM with encodingId: 0">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ferencfarkas09&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Happy-Gastro/react-native-thermal-printer.git&quot;,
+    &quot;accountId&quot;: &quot;922d9f4d-1b99-4f77-ba9c-f703cd9523d8&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2sXqpCGsVSKhJmxwbC6Opg7lBOL" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/fecny/WebstormProjects/react-native-thermal-printer",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "prettierjs.PrettierConfiguration.Package": "/Users/fecny/WebstormProjects/react-native-thermal-printer/node_modules/prettier",
+    "ts.external.directory.path": "/Users/fecny/WebstormProjects/react-native-thermal-printer/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-WS-243.23654.157" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="66aaaada-c995-4b29-9d1b-f993fa9d1cc9" name="Changes" comment="" />
+      <created>1738612448990</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1738612448990</updated>
+      <workItem from="1738612453655" duration="437000" />
+      <workItem from="1738614476566" duration="6151000" />
+      <workItem from="1738651683186" duration="223000" />
+      <workItem from="1738660472866" duration="2999000" />
+      <workItem from="1738666029626" duration="447000" />
+      <workItem from="1738671810303" duration="416000" />
+      <workItem from="1738672605029" duration="624000" />
+      <workItem from="1738753622780" duration="3067000" />
+      <workItem from="1738825824951" duration="983000" />
+      <workItem from="1738871486449" duration="1032000" />
+    </task>
+    <task id="LOCAL-00001" summary="Fix encoding and charsetId property errors at build">
+      <option name="closed" value="true" />
+      <created>1738612521598</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1738612521598</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Fix encoding and charsetId property errors at build">
+      <option name="closed" value="true" />
+      <created>1738612638457</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1738612638457</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Fix encoding and charsetId property errors at build">
+      <option name="closed" value="true" />
+      <created>1738612882663</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1738612882663</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Fix encoding and charsetId property errors at build">
+      <option name="closed" value="true" />
+      <created>1738651899552</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1738651899552</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Fix encoding and charsetId property errors at build">
+      <option name="closed" value="true" />
+      <created>1738661128100</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1738661128100</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Fix encoding and charsetId property errors at build">
+      <option name="closed" value="true" />
+      <created>1738663445364</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1738663445364</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Fix encoding and charsetId property errors at build">
+      <option name="closed" value="true" />
+      <created>1738663514499</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1738663514499</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Fix encoding and charsetId property errors at build">
+      <option name="closed" value="true" />
+      <created>1738672169580</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1738672169580</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Fix encoding and charsetId property errors at build">
+      <option name="closed" value="true" />
+      <created>1738672650198</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1738672650198</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Fix encoding and charsetId property errors at build">
+      <option name="closed" value="true" />
+      <created>1738754005747</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1738754005747</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Fix encoding and charsetId property errors at build">
+      <option name="closed" value="true" />
+      <created>1738754022948</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1738754022948</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Fix encoding and charsetId property errors at build">
+      <option name="closed" value="true" />
+      <created>1738755513907</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1738755513907</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Fix encoding and charsetId property errors at build">
+      <option name="closed" value="true" />
+      <created>1738756846341</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1738756846341</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Fix passing charset and encodingId to native through bridge (for TCP and Bluetooth too), default is Cp437 - OEM with encodingId: 0">
+      <option name="closed" value="true" />
+      <created>1738826756509</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1738826756509</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Fix passing charset and encodingId to native through bridge (for TCP and Bluetooth too), default is Cp437 - OEM with encodingId: 0">
+      <option name="closed" value="true" />
+      <created>1738826789747</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1738826789747</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Fix passing charset and encodingId to native through bridge (for TCP and Bluetooth too), default is Cp437 - OEM with encodingId: 0">
+      <option name="closed" value="true" />
+      <created>1738871598919</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1738871598919</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Fix passing charset and encodingId to native through bridge (for TCP and Bluetooth too), default is Cp437 - OEM with encodingId: 0">
+      <option name="closed" value="true" />
+      <created>1738871607181</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1738871607181</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="Fix encoding and charsetId property errors at build" />
+    <MESSAGE value="Fix passing charset and encodingId to native through bridge (for TCP and Bluetooth too), default is Cp437 - OEM with encodingId: 0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix passing charset and encodingId to native through bridge (for TCP and Bluetooth too), default is Cp437 - OEM with encodingId: 0" />
+    <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
+  </component>
+</project>
