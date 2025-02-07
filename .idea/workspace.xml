@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66aaaada-c995-4b29-9d1b-f993fa9d1cc9" name="Changes" comment="Fix passing charset and encodingId to native through bridge (for TCP and Bluetooth too), default is Cp437 - OEM with encodingId: 0">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="66aaaada-c995-4b29-9d1b-f993fa9d1cc9" name="Changes" comment="fix: passing charset and encodingId to native through bridge">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/reactnativethermalprinter/ThermalPrinterModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/reactnativethermalprinter/ThermalPrinterModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +86,7 @@
       <workItem from="1738672605029" duration="624000" />
       <workItem from="1738753622780" duration="3067000" />
       <workItem from="1738825824951" duration="983000" />
-      <workItem from="1738871486449" duration="1032000" />
+      <workItem from="1738871486449" duration="2448000" />
     </task>
     <task id="LOCAL-00001" summary="Fix encoding and charsetId property errors at build">
       <option name="closed" value="true" />
@@ -222,7 +224,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738871607181</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="fix: passing charset and encodingId to native through bridge">
+      <option name="closed" value="true" />
+      <created>1738872630678</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1738872630678</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,7 +243,9 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Fix encoding and charsetId property errors at build" />
     <MESSAGE value="Fix passing charset and encodingId to native through bridge (for TCP and Bluetooth too), default is Cp437 - OEM with encodingId: 0" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix passing charset and encodingId to native through bridge (for TCP and Bluetooth too), default is Cp437 - OEM with encodingId: 0" />
+    <MESSAGE value="Fix: passing charset and encodingId to native through bridge" />
+    <MESSAGE value="fix: passing charset and encodingId to native through bridge" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: passing charset and encodingId to native through bridge" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>
