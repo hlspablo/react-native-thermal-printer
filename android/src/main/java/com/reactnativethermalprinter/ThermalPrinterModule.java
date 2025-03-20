@@ -78,7 +78,7 @@ public class ThermalPrinterModule extends ReactContextBaseJavaModule {
     this.jsPromise = promise;
     try {
       TcpConnection connection = new TcpConnection(ipAddress, (int) port, (int) timeout);
-      this.printIt(connection, payload, autoCut, openCashbox, mmFeedPaper, printerDpi, printerWidthMM, printerNbrCharactersPerLine, charset, encodingId);
+      this.printIt(connection, payload, autoCut, openCashbox, mmFeedPaper, printerDpi, printerWidthMM, printerNbrCharactersPerLine, charset, (int) encodingId);
     } catch (Exception e) {
       this.jsPromise.reject("Connection Error", e.getMessage());
     }
@@ -190,7 +190,7 @@ public class ThermalPrinterModule extends ReactContextBaseJavaModule {
 
   private void printIt(DeviceConnection printerConnection, String payload, boolean autoCut, boolean openCashbox, double mmFeedPaper, double printerDpi, double printerWidthMM, double printerNbrCharactersPerLine, String charset, int encodingId) {
     try {
-      EscPosPrinter printer = new EscPosPrinter(printerConnection, (int) printerDpi, (float) printerWidthMM, (int) printerNbrCharactersPerLine, new EscPosCharsetEncoding(charset, encodingId));
+      EscPosPrinter printer = new EscPosPrinter(printerConnection, (int) printerDpi, (float) printerWidthMM, (int) printerNbrCharactersPerLine, new EscPosCharsetEncoding(charset, (int) encodingId));
       String processedPayload = preprocessImgTag(printer, payload);
 
       if (openCashbox) {
