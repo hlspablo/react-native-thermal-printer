@@ -36,6 +36,22 @@ type NativeModuleType = typeof NativeModules & {
       encodingId: number
     ): Promise<void>;
     getBluetoothDeviceList(): Promise<BluetoothPrinter[]>;
+    getPrinterWidthMM(
+      macAddress: string,
+      printerDpi: number,
+      printerWidthMM: number,
+      printerNbrCharactersPerLine: number,
+      charset: string,
+      encodingId: number
+    ): Promise<number>;
+    getPrinterDpi(
+      macAddress: string,
+      printerDpi: number,
+      printerWidthMM: number,
+      printerNbrCharactersPerLine: number,
+      charset: string,
+      encodingId: number
+    ): Promise<number>;
   };
 };
 
@@ -77,7 +93,7 @@ let defaultConfig: PrintTcpInterface & PrintBluetoothInterface = {
   openCashbox: false,
   mmFeedPaper: 20,
   printerDpi: 203,
-  printerWidthMM: 80,
+  printerWidthMM: 48,
   printerNbrCharactersPerLine: 42,
   timeout: 30000,
   charset: 'CP437',
@@ -158,9 +174,57 @@ const getBluetoothDeviceList = (): Promise<BluetoothPrinter[]> => {
   return ThermalPrinterModule.getBluetoothDeviceList();
 };
 
+const getPrinterWidthMM = (
+  args: Partial<PrintBluetoothInterface> &
+    Pick<PrintBluetoothInterface, 'macAddress'>
+): Promise<number> => {
+  const {
+    macAddress,
+    printerDpi,
+    printerWidthMM,
+    printerNbrCharactersPerLine,
+    charset,
+    encodingId,
+  } = getConfig(args);
+
+  return ThermalPrinterModule.getPrinterWidthMM(
+    macAddress,
+    printerDpi,
+    printerWidthMM,
+    printerNbrCharactersPerLine,
+    charset,
+    encodingId
+  );
+};
+
+const getPrinterDpi = (
+  args: Partial<PrintBluetoothInterface> &
+    Pick<PrintBluetoothInterface, 'macAddress'>
+): Promise<number> => {
+  const {
+    macAddress,
+    printerDpi,
+    printerWidthMM,
+    printerNbrCharactersPerLine,
+    charset,
+    encodingId,
+  } = getConfig(args);
+
+  return ThermalPrinterModule.getPrinterDpi(
+    macAddress,
+    printerDpi,
+    printerWidthMM,
+    printerNbrCharactersPerLine,
+    charset,
+    encodingId
+  );
+};
+
 export default {
   printTcp,
   printBluetooth,
   defaultConfig,
   getBluetoothDeviceList,
+  getPrinterWidthMM,
+  getPrinterDpi,
 };

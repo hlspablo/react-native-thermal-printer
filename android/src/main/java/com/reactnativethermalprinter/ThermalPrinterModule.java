@@ -108,7 +108,7 @@ public class ThermalPrinterModule extends ReactContextBaseJavaModule {
     } else if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.S && ContextCompat.checkSelfPermission(getCurrentActivity(), Manifest.permission.BLUETOOTH_SCAN) != PackageManager.PERMISSION_GRANTED) {
       ActivityCompat.requestPermissions(getCurrentActivity(), new String[]{Manifest.permission.BLUETOOTH_SCAN}, 1);
     } else {
-      try {
+      try {   
         this.printIt(btPrinter.connect(), payload, autoCut, openCashbox, mmFeedPaper, printerDpi, printerWidthMM, printerNbrCharactersPerLine, charset, encodingId);
       } catch (Exception e) {
         this.jsPromise.reject("Connection Error", e.getMessage());
@@ -152,6 +152,70 @@ public class ThermalPrinterModule extends ReactContextBaseJavaModule {
       } catch (Exception e) {
         this.jsPromise.reject("Bluetooth Error", e.getMessage());
       }
+    }
+  }
+
+  @ReactMethod
+  public void getPrinterWidthMM(String macAddress, double printerDpi, double printerWidthMM, double printerNbrCharactersPerLine, String charset, int encodingId, Promise promise) {
+    this.jsPromise = promise;
+    BluetoothConnection btPrinter;
+
+    if (TextUtils.isEmpty(macAddress)) {
+      btPrinter = BluetoothPrintersConnections.selectFirstPaired();
+    } else {
+      btPrinter = getBluetoothConnectionWithMacAddress(macAddress);
+    }
+
+    if (btPrinter == null) {
+      this.jsPromise.reject("Connection Error", "Bluetooth Device Not Found");
+      return;
+    }
+
+    try {
+      EscPosPrinter printer = new EscPosPrinter(
+        btPrinter.connect(),
+        (int) printerDpi,
+        (float) printerWidthMM,
+        (int) printerNbrCharactersPerLine,
+        new EscPosCharsetEncoding(charset, encodingId)
+      );
+      float widthMM = printer.getPrinterWidthMM();
+      printer.disconnectPrinter();
+      this.jsPromise.resolve(widthMM);
+    } catch (Exception e) {
+      this.jsPromise.reject("Error", e.getMessage());
+    }
+  }
+
+  @ReactMethod
+  public void getPrinterDpi(String macAddress, double printerDpi, double printerWidthMM, double printerNbrCharactersPerLine, String charset, int encodingId, Promise promise) {
+    this.jsPromise = promise;
+    BluetoothConnection btPrinter;
+
+    if (TextUtils.isEmpty(macAddress)) {
+      btPrinter = BluetoothPrintersConnections.selectFirstPaired();
+    } else {
+      btPrinter = getBluetoothConnectionWithMacAddress(macAddress);
+    }
+
+    if (btPrinter == null) {
+      this.jsPromise.reject("Connection Error", "Bluetooth Device Not Found");
+      return;
+    }
+
+    try {
+      EscPosPrinter printer = new EscPosPrinter(
+        btPrinter.connect(),
+        (int) printerDpi,
+        (float) printerWidthMM,
+        (int) printerNbrCharactersPerLine,
+        new EscPosCharsetEncoding(charset, encodingId)
+      );
+      int dpi = printer.getPrinterDpi();
+      printer.disconnectPrinter();
+      this.jsPromise.resolve(dpi);
+    } catch (Exception e) {
+      this.jsPromise.reject("Error", e.getMessage());
     }
   }
 

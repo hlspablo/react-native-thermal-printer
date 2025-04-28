@@ -32,5 +32,7 @@ declare const _default: {
     printBluetooth: (args: Partial<PrintBluetoothInterface> & Pick<PrinterInterface, "payload">) => Promise<void>;
     defaultConfig: PrintTcpInterface & PrintBluetoothInterface;
     getBluetoothDeviceList: () => Promise<BluetoothPrinter[]>;
+    getPrinterWidthMM: (args: Partial<PrintBluetoothInterface> & Pick<PrintBluetoothInterface, "macAddress">) => Promise<number>;
+    getPrinterDpi: (args: Partial<PrintBluetoothInterface> & Pick<PrintBluetoothInterface, "macAddress">) => Promise<number>;
 };
 export default _default;
